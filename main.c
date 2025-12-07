@@ -11,7 +11,7 @@
 /* Prototypes mirroring the C++ version */
 static void main_menu(void);            /* runs in the main loop */
 static void print_main_menu(void);      /* output the main menu description */
-static int  get_user_input(void);       /* get a valid integer menu choice */
+int  get_user_input(void);       /* get a valid integer menu choice */
 static void select_menu_item(int input);/* run code based on user's choice */
 static void go_back_to_main(void);      /* wait for 'b'/'B' to continue */
 static int  is_integer(const char *s);  /* validate integer string */
@@ -35,7 +35,7 @@ static void main_menu(void)
     }
 }
 
-static int get_user_input(void)
+int get_user_input(void)
 {
     enum { MENU_ITEMS = 3 };   /* 1..4 = items, 5 = Exit */ 
     char buf[128];
