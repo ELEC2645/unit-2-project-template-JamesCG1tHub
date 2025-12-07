@@ -1,26 +1,36 @@
 #include <stdio.h>
 #include "funcs.h"
-
+#include <math.h>
 void menu_item_1(void) {
-    printf("\n>> Menu 1\n");
-    printf("\nSome code here does something useful\n");
-    /* you can call a function from here that handles menu 1 */
+    waveCalculatorMenu();
 }
 
 void menu_item_2(void) {
-    printf("\n>> Menu 2\n");
-    printf("\nSome code here does something useful\n");
-    /* you can call a function from here that handles menu 2 */
+    aiAssistantMenu();
 }
 
-void menu_item_3(void) {
-    printf("\n>> Menu 3\n");
-    printf("\nSome code here does something useful\n");
-    /* you can call a function from here that handles menu 3 */
+void waveCalculatorMenu(void) {
+    printf("\n---Waveform Calculator---\n");
+    printf("1) Calculate Sine Wave\n");
+    printf("2) Calculate Square Wave\n");
+    printf("3) Calculate Triangle Wave\n");
+    
+
 }
 
-void menu_item_4(void) {
-    printf("\n>> Menu 4\n");
-    printf("\nSome code here does something useful\n");
-    /* you can call a function from here that handles menu 4 */
+void aiAssistantMenu(void) {
+    printf("\n---AI Assistant---\n");
+    printf("1) Explain Concept\n");
+    printf("2) Formula Helper\n");
+    printf("3) Trobleshoot a Problem\n");
+    
+
 }
+
+void calculateSineWave(void){ }
+void calculateSquareWave(void) {}
+void calculateTriangleWave(void) {}
+
+void explainConcept(void){}
+void formulaHelper(void) {}
+void troubleshootProblem(void) {}

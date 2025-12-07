@@ -3,7 +3,15 @@
 
 void menu_item_1(void);
 void menu_item_2(void);
-void menu_item_3(void);
-void menu_item_4(void);
 
+void waveCalculatorMenu(void);
+void calculateSineWave(void);
+void calculateSquareWave(void);
+void calculateTriangleWave(void);
+
+
+void aiAssistantMenu(void);
+void explainConcept(void);
+void formulaHelper(void);
+void troubleshootProblem(void);
 #endif
