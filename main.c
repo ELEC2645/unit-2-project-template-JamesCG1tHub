@@ -37,7 +37,7 @@ static void main_menu(void)
 
 int get_user_input(void)
 {
-    enum { MENU_ITEMS = 3 };   /* 1..4 = items, 5 = Exit */ 
+    enum { MENU_ITEMS = 5 };   /* 1..4 = items, 5 = Exit */ 
     char buf[128];
     int valid_input = 0;
     int value = 0;

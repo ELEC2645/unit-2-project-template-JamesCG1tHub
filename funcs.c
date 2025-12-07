@@ -27,7 +27,6 @@ void aiAssistantMenu(void) {
     printf("2) Troubleshoot a Problem\n");
     printf("3) Formula Helper\n");
     
-    printf("\nSelect item: ");
 
     int choice = get_user_input();
 
@@ -62,7 +61,7 @@ void explainConceptMenu(void){
         case 1: printf("\nExplanation of Ohm's Law\n"); break;
         case 2: printf("\nEplanation of Kirchoffs Laws\n"); break;
         case 3: printf("\nExplanation of Series vs Parallel Circuits\n"); break;
-        case 4: printf("\nEdplanation of Voltage Dividers\n"); break;
+        case 4: printf("\nExplanation of Voltage Dividers\n"); break;
         case 5: printf("\nExplanation of RMS Voltage\n"); break;
         default: return;
     }
@@ -122,7 +121,7 @@ void troubleshootProblemMenu(void) {
     printf("---Troubeshoot a problem---\n");
 
     printf("Please descirbe your issue(short sentence and no caps).\n");
-    printf("Type 'B' or 'b' to exit to menu./n/n");
+    printf("Type 'B' or 'b' to exit to menu.\n\n");
 
     char issue[256];
     fgets(issue, sizeof(issue), stdin);
