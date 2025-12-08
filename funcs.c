@@ -58,11 +58,11 @@ void explainConceptMenu(void){
     int choice = get_user_input();
 
     switch(choice) {
-        case 1: printf("\nExplanation of Ohm's Law\n"); break;
-        case 2: printf("\nEplanation of Kirchoffs Laws\n"); break;
-        case 3: printf("\nExplanation of Series vs Parallel Circuits\n"); break;
-        case 4: printf("\nExplanation of Voltage Dividers\n"); break;
-        case 5: printf("\nExplanation of RMS Voltage\n"); break;
+        case 1: ohmsLaw(); break;
+        case 2: kirchoffsLaws(); break;
+        case 3: seriesVsParalel(); break;
+        case 4: voltageDividers(); break;
+        case 5: rmsVoltage(); break;
         default: return;
     }
 
@@ -174,4 +174,111 @@ void formulaHelperMenu(void) {
         case 5: printf("\nExplanation of RMS Voltage\n"); break;
         default: return;
     }
+}
+// explain the concept functions
+void ohmsLaw(void) {
+    printf("\n--- Ohm's Law ---\n");
+    printf("Ohm's Law describes the relationship between voltage (V),\n");
+    printf("current (I), and resistance (R) in an electrical circuit.\n\n");
+
+    printf("It states that:\n");
+    printf("    V = I * R\n\n");
+
+    printf("Where:\n");
+    printf("    V = Voltage (volts)\n");
+    printf("    I = Current (amps)\n");
+    printf("    R = Resistance (ohms)\n\n");
+
+    ("Meaning:\n");
+    printf(" - Increasing voltage increases current.\n");
+    printf(" - Increasing resistance reduces current.\n\n");
+
+    printf("Example:\n");
+    printf(" If a 10-ohm resistor has 2 A flowing through it:\n");
+    printf("    V = I * R = 2 * 10 = 20 V\n\n");
+}
+void kirchoffsLaws(void) {
+    printf("\n--- Kirchhoff's Laws ---\n");
+
+    printf("Kirchhoff's Laws describe how current and voltage behave\n");
+    printf("in electrical circuits. There are two main laws:\n\n");
+
+    printf("1) Kirchhoff's Current Law (KCL):\n");
+    printf("   \"The total current entering a node equals the total\n");
+    printf("    current leaving the node.\"\n");
+    printf("   - Current does not disappear or appear from nowhere.\n");
+    printf("   - All currents must balance at any junction.\n\n");
+
+    printf("   Example:\n");
+    printf("     If 3 A enters a node and 1 A leaves on one branch,\n");
+    printf("     then 2 A must leave on the other branch.\n\n");
+
+    printf("2) Kirchhoff's Voltage Law (KVL):\n");
+    printf("   \"The sum of voltage rises and drops around any closed\n");
+    printf("    loop is zero.\"\n");
+    printf("   - Supply voltage equals the total voltage drops.\n\n");
+
+    printf("   Example:\n");
+    printf("     A 9V battery powering two resistors:\n");
+    printf("         9V = 5V + 4V\n\n");
+
+    printf("In simple terms:\n");
+    printf(" - KCL: currents must balance.\n");
+    printf(" - KVL: voltages must balance.\n\n");
+}
+void seriesVsParalel(void) {
+    printf("\n--- Series vs Parallel Circuits ---\n");
+
+    printf("Series Circuits:\n");
+    printf(" - Components are connected end-to-end.\n");
+    printf(" - Same current flows through every component.\n");
+    printf(" - Total resistance adds directly:\n");
+    printf("     RT = R1 + R2 + R3 + ...\n");
+    printf(" - If one component fails, the whole circuit stops.\n\n");
+
+    printf("Parallel Circuits:\n");
+    printf(" - Components share the same two nodes.\n");
+    printf(" - Same voltage across each branch.\n");
+    printf(" - Total resistance is found using reciprocals:\n");
+    printf("     1/RT = 1/R1 + 1/R2 + 1/R3 + ...\n");
+    printf(" - If one branch fails, others still operate.\n\n");
+
+    printf("Key differences:\n");
+    printf(" - Series: same current, voltage divides.\n");
+    printf(" - Parallel: same voltage, current divides.\n\n");
+}
+void voltageDividers(void) {
+    printf("\n--- Voltage Dividers ---\n");
+
+    printf("A voltage divider uses two resistors to produce a smaller\n");
+    printf("output voltage from a larger input voltage.\n\n");
+
+    printf("The formula is:\n");
+    printf("    Vout = Vin × (R2 / (R1 + R2))\n\n");
+
+    printf("Meaning:\n");
+    printf(" - Output voltage is a fraction of the input.\n");
+    printf(" - Fraction depends on resistor values.\n");
+    printf(" - Commonly used to scale voltages for sensors or ADCs.\n\n");
+
+    printf("Example:\n");
+    printf(" If Vin = 12V, R1 = 6kΩ and R2 = 6kΩ:\n");
+    printf("    Vout = 12 × (6 / 12) = 6V\n\n");
+}
+void rmsVoltage(void) {
+    printf("\n--- RMS Voltage ---\n");
+
+    printf("RMS (Root Mean Square) voltage represents the effective\n");
+    printf("or equivalent DC voltage of an AC waveform.\n\n");
+
+    printf("For a sine wave:\n");
+    printf("    VRMS = Vpeak / sqrt(2)\n");
+    printf("Or using peak-to-peak voltage:\n");
+    printf("    VRMS = Vpp / (2 × sqrt(2))\n\n");
+
+    printf("Why RMS is important:\n");
+    printf(" - AC voltage changes constantly.\n");
+    printf(" - RMS tells us how much power the AC signal delivers.\n");
+    printf(" - Mains electricity (230V in the UK) is an RMS value.\n");
+    printf("   The peak voltage is about 325V.\n\n");
 }

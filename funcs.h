@@ -11,8 +11,16 @@ void calculateTriangleWave(void);
 
 
 void aiAssistantMenu(void);
+
 void explainConceptMenu(void);
+void ohmsLaw(void);
+void kirchoffsLaws(void);
+void seriesVsParalel(void);
+void voltageDividers(void);
+void rmsVoltage(void);
+
 void formulaHelperMenu(void);
+
 void troubleshootProblemMenu(void);
 
 
