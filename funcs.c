@@ -53,7 +53,6 @@ void explainConceptMenu(void){
     printf("4) Voltage Dividers\n");
     printf("5) RMS Voltage\n");
 
-    printf("\nSelect an item(1-5): ");
 
     int choice = get_user_input();
 
@@ -156,22 +155,22 @@ if (!found) {
 void formulaHelperMenu(void) {
     printf("\n---Formula Helper---\n");
     
-    printf("1) V= IR\n");
+    printf("1) V= I*R\n");
     printf("2) Formulas relating to power\n");
-    printf("3) w = 2PIf\n");
+    printf("3) w = 2*PI*f\n");
     printf("4) f = 1/T\n");
-    printf("5) E = hf\n");
+    printf("5) E = h*f\n");
 
     printf("\nSelect an item(1-5): ");
 
     int choice = get_user_input();
 
     switch(choice) {
-        case 1: printf("\nExplanation of Ohm's Law\n"); break;
-        case 2: printf("\nEplanation of Kirchoffs Laws\n"); break;
-        case 3: printf("\nExplanation of Series vs Parallel Circuits\n"); break;
-        case 4: printf("\nEdplanation of Voltage Dividers\n"); break;
-        case 5: printf("\nExplanation of RMS Voltage\n"); break;
+        case 1: ohmsLaw(); break;
+        case 2: formulasRelatingToPower(); break;
+        case 3: w2PIf(); break;
+        case 4: f1T(); break;
+        case 5: Ehf(); break;
         default: return;
     }
 }
@@ -254,7 +253,7 @@ void voltageDividers(void) {
     printf("output voltage from a larger input voltage.\n\n");
 
     printf("The formula is:\n");
-    printf("    Vout = Vin × (R2 / (R1 + R2))\n\n");
+    printf("    Vout = Vin * (R2 / (R1 + R2))\n\n");
 
     printf("Meaning:\n");
     printf(" - Output voltage is a fraction of the input.\n");
@@ -263,7 +262,7 @@ void voltageDividers(void) {
 
     printf("Example:\n");
     printf(" If Vin = 12V, R1 = 6kΩ and R2 = 6kΩ:\n");
-    printf("    Vout = 12 × (6 / 12) = 6V\n\n");
+    printf("    Vout = 12 * (6 / 12) = 6V\n\n");
 }
 void rmsVoltage(void) {
     printf("\n--- RMS Voltage ---\n");
@@ -274,11 +273,55 @@ void rmsVoltage(void) {
     printf("For a sine wave:\n");
     printf("    VRMS = Vpeak / sqrt(2)\n");
     printf("Or using peak-to-peak voltage:\n");
-    printf("    VRMS = Vpp / (2 × sqrt(2))\n\n");
+    printf("    VRMS = Vpp / (2 * sqrt(2))\n\n");
 
     printf("Why RMS is important:\n");
     printf(" - AC voltage changes constantly.\n");
     printf(" - RMS tells us how much power the AC signal delivers.\n");
     printf(" - Mains electricity (230V in the UK) is an RMS value.\n");
     printf("   The peak voltage is about 325V.\n\n");
+}
+//formula helper code
+void VIR(void) {
+    printf("\n--- V = I * R (Ohm's Law) ---\n");
+    printf("V is voltage, I is current, R is resistance.\n");
+    printf("Voltage equals current multiplied by resistance.\n\n");
+    printf("Example:\n");
+    printf("If I = 2 A and R = 5 ohms:\n");
+    printf("V = 2 * 5 = 10 V\n\n");
+}
+void formulasRelatingToPower (void) {
+    printf("\n--- Power Formulas ---\n");
+    printf("P is power, V is voltage, I is current, R is resistance.\n");
+    printf("Ways to calculate power:\n");
+    printf(" - P = V * I\n");
+    printf(" - P = I^2 * R\n");
+    printf(" - P = V^2 / R\n\n");
+    printf("Example:\n");
+    printf("If V = 12 V and I = 0.5 A:\n");
+    printf("P = 12 * 0.5 = 6 W\n\n");
+}
+void w2PIf (void) {
+    printf("\n--- w = 2 * PI * f (Angular Frequency) ---\n");
+    printf("w is angular frequency, f is frequency, PI is 3.14159...\n");
+    printf("Angular frequency shows how fast something oscillates.\n\n");
+    printf("Example:\n");
+    printf("If f = 50 Hz:\n");
+    printf("w = 2 * PI * 50 ≈ 314 rad/s\n\n");
+}
+void f1T (void) {
+    printf("\n--- f = 1 / T (Frequency from Period) ---\n");
+    printf("f is frequency in Hz, T is the period in seconds.\n");
+    printf("Frequency is how many cycles happen each second.\n\n");
+    printf("Example:\n");
+    printf("If T = 0.02 s:\n");
+    printf("f = 1 / 0.02 = 50 Hz\n\n");
+}
+void Ehf (void) {
+    printf("\n--- E = h * f (Photon Energy) ---\n");
+    printf("E is energy, h is Planck's constant, f is frequency.\n");
+    printf("This formula gives the energy of a photon.\n\n");
+    printf("Example:\n");
+    printf("If f = 5e14 Hz:\n");
+    printf("E = 6.63e-34 * 5e14 ≈ 3.3e-19 J\n\n");
 }

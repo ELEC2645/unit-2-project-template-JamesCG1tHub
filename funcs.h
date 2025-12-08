@@ -20,7 +20,11 @@ void voltageDividers(void);
 void rmsVoltage(void);
 
 void formulaHelperMenu(void);
-
+void VIR(void);
+void formulasRelatingToPower (void);
+void w2PIf (void);
+void f1T (void);
+void Ehf (void);
 void troubleshootProblemMenu(void);
 
 
