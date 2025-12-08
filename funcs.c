@@ -15,9 +15,40 @@ void waveCalculatorMenu(void) {
     printf("1) Calculate Sine Wave\n");
     printf("2) Calculate Square Wave\n");
     printf("3) Calculate Triangle Wave\n");
+
+    int choice = get_user_input();
+
+    switch(choice) {
+        case 1:calculateSineWave(); break;
+        case 2: calculateSquareWave();break;
+        case 3: calculateTriangleWave(); break;
+        default: return;
+    }
+}
+void calculateSineWave(void){ 
+    double amplitude;
+    double frequency;
+    printf("---Sine wave---\n");
+    printf("Could you please tell me the frequency and amplitude of your wave (1dp)\n");
+    
+    printf("Enter amplitude (peak voltage): ");
+    scanf("%lf", &amplitude);
+    
+
+    printf("Enter frequency (Hz): ");
+    scanf("%lf", &frequency);
+
+    double Vpeak = amplitude;
+    double Vrms = Vpeak / sqrt(2);
+    double Vpp  = 2 * Vpeak;
+
+    printf("\nResults:\n");
+    printf("Peak voltage: %.3f V\n", Vpeak);
+    printf("Peak-to-peak voltage: %.3f V\n", Vpp);
+    printf("RMS voltage: %.3f V\n", Vrms);
+    printf("Frequency: %.3f Hz\n\n", frequency);
     
 }
-void calculateSineWave(void){ }
 void calculateSquareWave(void) {}
 void calculateTriangleWave(void) {}
 
