@@ -16,10 +16,10 @@ void waveCalculatorMenu(void) {
     printf("2) Calculate Square Wave\n");
     printf("3) Calculate Triangle Wave\n");
     
-
 }
-
-
+void calculateSineWave(void){ }
+void calculateSquareWave(void) {}
+void calculateTriangleWave(void) {}
 
 void aiAssistantMenu(void) {
     printf("\n---AI Assistant---\n");
@@ -40,9 +40,6 @@ void aiAssistantMenu(void) {
 
 }
 
-void calculateSineWave(void){ }
-void calculateSquareWave(void) {}
-void calculateTriangleWave(void) {}
 
 void explainConceptMenu(void){
     printf("\n---Explain a Concept---\n");
