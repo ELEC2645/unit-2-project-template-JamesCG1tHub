@@ -29,14 +29,16 @@ void calculateSineWave(void){
     double amplitude;
     double frequency;
     printf("---Sine wave---\n");
-    printf("Could you please tell me the frequency and amplitude of your wave (1dp)\n");
+    printf("Could you please tell me the frequency and amplitude of your wave\n");
     
     printf("Enter amplitude (peak voltage): ");
     scanf("%lf", &amplitude);
+    while (getchar() != '\n');
     
 
     printf("Enter frequency (Hz): ");
     scanf("%lf", &frequency);
+    while (getchar() != '\n');
 
     double Vpeak = amplitude;
     double Vrms = Vpeak / sqrt(2);
@@ -49,8 +51,63 @@ void calculateSineWave(void){
     printf("Frequency: %.3f Hz\n\n", frequency);
     
 }
-void calculateSquareWave(void) {}
-void calculateTriangleWave(void) {}
+void calculateSquareWave(void) {
+    double amplitude;
+    double frequency;
+    printf("---Square wave---\n");
+    printf("Could you please tell me the frequency and amplitude of your wave\n");
+    
+    printf("Enter amplitude (peak voltage): ");
+    scanf("%lf", &amplitude);
+    while (getchar() != '\n');
+    
+
+    printf("Enter frequency (Hz): ");
+    scanf("%lf", &frequency);
+    while (getchar() != '\n');
+
+    double Vpeak = amplitude;
+    double Vrms = Vpeak;     
+    double Vpp  = 2 * Vpeak;
+
+    printf("\nResults:\n");
+    printf("Peak voltage: %.3f V\n", Vpeak);
+    printf("Peak-to-peak voltage: %.3f V\n", Vpp);
+    printf("RMS voltage: %.3f V\n", Vrms);
+    printf("Frequency: %.3f Hz\n\n", frequency);
+}
+
+
+void calculateTriangleWave(void) {
+    double amplitude;
+    double frequency;
+    printf("---Triangle wave---\n");
+    printf("Could you please tell me the frequency and amplitude of your wave\n");
+    
+    printf("Enter amplitude (peak voltage): ");
+    scanf("%lf", &amplitude);
+    while (getchar() != '\n');
+    
+
+    printf("Enter frequency (Hz): ");
+    scanf("%lf", &frequency);
+    while (getchar() != '\n');
+
+    double Vpeak = amplitude;
+    double Vrms = Vpeak / sqrt(3);  
+    double Vpp  = 2 * Vpeak;
+
+    printf("\nResults:\n");
+    printf("Peak voltage: %.3f V\n", Vpeak);
+    printf("Peak-to-peak voltage: %.3f V\n", Vpp);
+    printf("RMS voltage: %.3f V\n", Vrms);
+    printf("Frequency: %.3f Hz\n\n", frequency);
+
+
+}
+
+
+
 
 void aiAssistantMenu(void) {
     printf("\n---AI Assistant---\n");
