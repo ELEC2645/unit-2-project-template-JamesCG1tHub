@@ -1,13 +1,5 @@
 [![Open in Codespaces](https://classroom.github.com/assets/launch-codespace-2972f46106e565e64193e422d61a12cf1da4916b45550586e14ef0a7c637dd04.svg)](https://classroom.github.com/open-in-codespaces?assignment_repo_id=21969547)
-# ELEC2645 Unit 2 Project Template
-
-** PLEASE DELETE THIS README AND REPLACE IT WITH YOUR OWN README.md FILE DESCRIBING YOUR PROJECT **
-
-
-This is the basic code for a command line application which you should use for your Unit 2 project.
-
-The code has separated the menu handling code in `main.c` and the function implementations in `funcs.c`. You should add your code to `funcs.c` (or you can create new files if you wish), and update `main.c` to call your functions from the menu.
-
+# ELEC2645 Unit 2 Project - Electronics AI assistant + waveform calculator
 
 ### 1 Run code
 
@@ -16,22 +8,24 @@ You can build the code as we have been using in the labs with
 
 Then run the code with `./main.out`
 
-
-### 2 The assignment
-
-Please read the assignment brief on the Minerva page for details of what you need to implement. 
+Electronics AI assistant with waveform calculator. 
 
 
+My project is exactly what is says on the title - I have tried to build an Electronics AI assistant with a waveform calculator.
 
-### 3 Test command
+The Electronics AI assistant is made up of 3 sections; Explain a concept, Trouble shoot a prboblem and Formula helper.
 
-The `test.sh` script is provided to check that your code compiles correctly. This is what the autograder will use to check your submission. You can run it with `bash test.sh` or `./test.sh` or just `make test`. 
+The Explain a concept aspect of the program takes 5 key Electronics principles and Explains how they work with an example of a situation in which it might be used. 
 
-You do not need to modify this script, but you can look at it to see what it does.
+The troubleshoot a problem asks for a simple sentence outlining the issue you may have with your circuit. It will then look through an array of keywords for any word matches with ones in your simple sentence. If it finds a match it will then suggest possible soloutions to your problem relating to this keyword. If it dosen't find a match in the database it will still suggest more generic soloutions that could help the user fix their circuit. 
+
+Finally the formula helper has a list of formulas. It will explain what each component of the formulas means and give a quick example of when the formula could be used.
 
 
-### 4 Submit Solution
+The Waveform Calculator is to help people with possible calculations for different types of waves they may come across. It will give the user an option of either a Sine Wave, a Square wave, or a Trinagle wave. It will then ask the user to give the Amplitude and Frequency of sed wave. Using this information it will then calcualte a few values based on the users waveform.
 
-Use the same method as previous labs to commit and push your code to your GitHub repository for the autograder to check. 
 
-In your final journal post, please include a link to your GitHub repository containing your code  *and* a zip file of your code as an attachment.
+I hope you enjoy testing my project!
+
+
+James Callaghan.
